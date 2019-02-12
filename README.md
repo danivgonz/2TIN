@@ -25,3 +25,4 @@ git clone https://github.com/danivgonz/2TIN.git
 
 
 [Dicas de Markdown](https://blog.da2k.com.br/2015/02/08/aprenda-markdown/)
+[Highlights.js](https://highlightjs.org/)
