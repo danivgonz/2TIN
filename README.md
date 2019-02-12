@@ -17,5 +17,11 @@ Em seguida é necessário:
 git config --global http.sslVerify false
 ```
 
+E por fim:
+
+```
+git clone https://github.com/danivgonz/2TIN.git
+```
+
 
 [Dicas de Markdown](https://blog.da2k.com.br/2015/02/08/aprenda-markdown/)
