@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Lorem Ipsum"
+---  
+
+![Lorem Ipsum](https://cdn-images-1.medium.com/max/690/0*ff7rFSLGl14Ysjxr.jpeg)
+
+###What is Lorem Ipsum? 
+
+**_Lorem Ipsum_** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
+been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+###Examples
+* Sed id augue suscipit, consequat diam eu, dictum nisl.
+* Cras ut risus eget arcu tincidunt porttitor.
+* Cras vel lorem sed massa pharetra eleifend at id velit.
+* Maecenas laoreet augue sit amet sem pretium, ut efficitur lacus tempor.
+* Nulla sit amet quam sodales, aliquam dolor eget, accumsan lacus.
+
+<https://www.google.com.br>

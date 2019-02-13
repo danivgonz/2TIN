@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 99vh;
+            margin: 0;
+            border: 0;
+            padding: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- circle sem boas condutas -->
+    <svg id="circle" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <circle id="bolinha" cx="400" cy="500" r="100" fill="#ed145b" />
+    </svg>
+
+    <script type="text/javascript">
+        var circle = document.getElementById('circle');
+    
+        /* circle sem boas condutas */
+        for (let i = 0; i < 100; i++) {
+            var x = i;
+            var y = x*x/10.0 - 5*x + 100;
+            circle.innerHTML += '<circle cx="' + x + '" cy="' + y + '" r="5" fill="#d4a525" />';            
+        }
+
+        /* teste com boas condutas */
+        function criaCirculo(x, y, r) {
+            var s = '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="blue" class="circleAnime" />';
+            return s;
+        }
+
+        for (let i = 0; i < 20; i++) {
+            var x = Math.floor(Math.random() * 1220);
+            var y = Math.floor(Math.random() * 928);
+            var r = Math.floor((Math.random() * 30) + 5);
+            circle.innerHTML += criaCirculo(x, y, r);
+            
+        }
+
+        // Bolinha 
+
+        var bolinha = document.getElementById('bolinha');
+        
+        /*  Funções de tempo
+
+            window.setTimeout = só roda uma vez
+            window.setInterval = executa varia vezes dentro do intervalo
+        */
+
+        var bx = 0;
+
+        function moverBolinha(){
+            bolinha.setAttribute("cx", bx);
+            bx += 5;
+            bx = bx % 800;             
+        }
+
+        window.setInterval(
+            moverBolinha, 
+            // tempo em milisegundos
+            100
+        )
+
+        // Mover bolinhas
+        var bolinhas = document.getElementsByClassName('circleAnime');
+        var ns = "http://www.w3.org/2000/svg";
+        function moverBolinhas(){
+            for(var i in bolinhas){
+                var x = bolinhas[i].getAttribute("cx");
+                bolinhas[i].setAttribute("cx", (x+5) % 800 );
+            }
+
+        }
+
+        window.setInterval(
+            moverBolinhas, 
+            100
+        )
+
+    </script>
+</body>
+</html>
