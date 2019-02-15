@@ -1,0 +1,22 @@
+
+Descreva o que é Iot.
+
+São objetos físicos conectados a internet que se comunicam entre si para serem acionados ou acionarem outros.
+
+-------------
+
+sensores - detectam
+atuadores - executam comandos
+controlador - interpreta informação passada pelo sensor e manda comando para o atuador executar
+
+-------------
+
+Arduino - open source
+
+
+
+Filmes 
+
+Blackhat
+Invasao de privacidade
+
