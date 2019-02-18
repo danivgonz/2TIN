@@ -9,18 +9,15 @@
 <?php
 
     function sortear(){
-        for ($i=0; $i < 6; $i++) { 
-           $megasena[] = rand(1, 60);
+        for ($i=0; $i < 6; $i++) {
+          $megasena[] = rand(1, 60);
         }
 
         sort($megasena);
-        implode(' ', $megasena);
-        return print_r($megasena);
+        echo "Os números da mega-sena são: " . implode(" - ", $megasena);
     }
 
-    sortear();
-
-//    print_r($megasena);
+     sortear();
 
 
 ?>
