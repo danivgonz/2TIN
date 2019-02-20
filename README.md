@@ -26,6 +26,12 @@ git clone https://github.com/danivgonz/2TIN.git
 
 [Criando em um repositório novo](http://guides.railsgirls.com/guides-ptbr/github)  
 
+Depois de colocar o repositório local no github execute:
+```
+git checkout master
+git merge origin/master --allow-unrelated-histories
+```
+
 [Dicas de Markdown](https://blog.da2k.com.br/2015/02/08/aprenda-markdown/)  
 
 [Highlights.js](https://highlightjs.org/)
