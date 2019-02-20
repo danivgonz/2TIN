@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script type="text/javascript">
+
+        // Construção de objeto na forma literal
+
+        var pessoa1 = {
+            nome: "luizinho",
+            digaOi: function () {
+                console.log('olá meu nome é ' + this.nome)
+            }
+        }
+
+        var pessoa2 = {
+            nome: "daniela",
+            digaOi: function () {
+                console.log('olá meu nome é ' + this.nome)
+            }
+        }
+
+         var pessoa3 = {
+            nome: "italo",
+            digaOi: function () {
+                console.log('olá meu nome é ' + this.nome)
+            }
+        }
+
+        var carro1 = {
+            placa: "abc-1234",
+            tanque: 100,
+            ligarCarro: function(){
+                console.log("ligando carro de placa: " + this.placa)
+            },
+            passageiros: [pessoa1, pessoa2, pessoa3],
+            funcoes: [
+                function () {
+                    console.log('function 1')
+                },
+                function () {
+                    console.log('function 2')
+                },
+                function () {
+                    console.log('function 3')
+                }
+            ]
+        }
+
+        carro1.ligarCarro();
+        carro1.passageiros[1].digaOi();
+        carro1.funcoes[2]();
+
+
+
+        // objetos com função construtora (jeito correto)
+
+        function Carro(placa){
+            this.placa = placa;
+            this.liga = function(){
+                if (this.ligado == true) {
+                    console.log("o carro já está ligado: " + this.placa)
+                }else{
+                    console.log("ligando carro de placa: " + this.placa)
+                    this.ligado = true;
+                }
+            }
+            this.desliga = function(){
+                if (this.ligado == false) {
+                    console.log('o carro já está desligado')
+                }else{
+                    console.log("desligando carro de placa: " + this.placa)
+                    this.ligado = false;
+                }
+            }
+        }
+
+        var x = new Carro('abc-1234');
+
+        x.desliga();
+        x.liga();
+        x.liga();
+        x.desliga();
+
+        var z = new Carro('abc-5678');
+        z.liga();
+
+        
+        var estacionamento = {
+            nome: 'meu estacionamento',
+            carros: []
+        }
+
+        var estacionamento2 = {
+            nome: 'meu estacionamento',
+            carros: []
+        }
+
+        function adicionaCarro(estac, carro){
+            estac.carros.push(carro);
+        }
+
+        for (let i = 1000; i < 9999; i++) {
+            estacionamento.carros.push(new Carro('abc-'+i))
+            adicionaCarro(estacionamento2, new Carro('abc-'+i))
+        }
+
+        console.log(estacionamento.carros.length)
+        console.log(estacionamento2.carros.length)
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #resultado{
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div>
+        <input type="number" id="number" width="50">
+        <input type="button" value="ok" onclick="fatorial()" >
+        <br>
+        <br>
+        <div id="resultado"></div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        function fatorial() {
+            var n = parseInt(document.getElementById('number').value);
+            var resultado = document.getElementById('resultado');
+            
+            var p = n;
+
+            if (n == 0) {
+                p = 1;
+            } else{
+                for (let i = n-1; i >= 1; i--) {
+                    // console.log(p + " * " + i + " = " + p * i)
+                    p = p * i;
+                }
+            }
+
+            resultado.innerText = "O fatorial de " + n + " é: " + p;
+        }
+        
+    </script>
+</body>
+</html>
