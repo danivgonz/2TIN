@@ -12,7 +12,7 @@
       $connect = mysqli_connect('localhost', 'root', 'labfiap$2018', 'desafio8');
 
       if (!$connect) {
-        echo "vish! deu ruim.";
+        die("vish! deu ruim.");
       }
 
       $query = "SELECT * FROM usuario";

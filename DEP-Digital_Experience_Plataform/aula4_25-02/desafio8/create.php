@@ -12,7 +12,7 @@
         $connect = mysqli_connect('localhost', 'root', 'labfiap$2018', 'desafio8');
 
         if (!$connect) {
-          echo "Conexão falhou!";
+            die("vish! deu ruim.");
         }
 
         $username = $_POST['username'];
