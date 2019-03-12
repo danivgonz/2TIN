@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Nac1</title>
+  </head>
+  <style type="text/css" media="screen">
+p{
+  font-size: larger;
+}
+  </style>
+  <body>
+
+    <div>
+      <p>
+      Nesta NAC você deverá criar uma API para construção de formas utilizando
+      classes e métodos. Aqui você encontrará todas as especificações necessárias
+      para elaboração dessa API. <b>Essa página não deverá ser modificada</b>. Você deverá
+      modificar o arquivo <u>desenho.js</u> e implementar todos os objetos internamente.
+      </p>
+      <p>O Resultado do SVG deverá ficar próximo ao exibido abaixo. <b>Boa Sorte</b>
+      </p>
+      <img width="200" src="resultado.png"/>
+    </div>
+    <h2>Aqui começa seu SVG</h2>
+    <svg style="border: 1px solid black" xmlns="http://www.w3.org/2000/svg"  width="500" height="300" id="tela">
+    </svg>
+    <script src="desenho.js" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      //Para auxiliar na criação dos elementos SVG, use:
+      //https://developer.mozilla.org/pt-BR/docs/Web/SVG
+
+      //Circulo(x,y,r) cria um círculo nas posições x,y com raio r
+      var c = new Circulo(50, 50, 25);
+      //Método que deverá alterar a cor de preenchimento 
+      c.setFill("yellow");
+      //Método que deverá alterar a cor e espessura da borda
+      c.setStroke("blue", 8);
+      
+      //Retangulo(x0,y0,x1,y2) Especifica os dois cantos do quadrado
+      var c2 = new Retangulo(200,200,250,250);
+      // idem do Circulo
+      c2.setStroke("yellow", 7);
+
+      /* Grid(x0,y0,x1,y1,dx,dy) 
+       x0,y0,x1,y1 são as coordenadas dos cantos do grid
+       dx e dy é o tamanho de cada retângulo no Grid
+       deverá retornar um objeto contendo um campo el. Esse campo
+       deverá ser uma matriz de Retangulos
+      */
+      var c3 = new Grid(0,0,500,300,50,50);
+      //Muda a cor do quadrado na linha 0 e coluna 3
+      c3.el[0][3].setFill("blue"); 
+      c3.el[0][7].setStroke("green", 5);
+
+    </script>
+  </body>
+</html>
