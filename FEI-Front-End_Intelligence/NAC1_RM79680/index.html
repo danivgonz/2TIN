@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+  <h1 class="page-heading">Exemplos em outros idiomas</h1>
+
+  <ul class="post-list">
+    {% for post in site.traducoes %}
+      <li>
+        <div class="post-link-content">
+          <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+  <h1 class="page-heading">Dados</h1>
+
+  <ul class="post-list">
+    {% for outros_exemplos in site.data.dados %}
+      <li>
+        <div class="post-link-content">
+          {{ outros_exemplos.nome }}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+</div>

@@ -1,0 +1,14 @@
+exemplos:
+  - item 1
+  - item 2'
+  - item 3
+
+outros_exemplos:
+  - nome: Ângelo
+    idade: 35
+  - nome: Pedro
+    idade: 40
+  - nome: Augusto
+    idade: 17
+  - nome: Gisele
+    idade: 37
