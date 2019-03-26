@@ -48,6 +48,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a{
+  text-decoration: none;  
+}
 
 
 /* ------ */
@@ -85,13 +88,26 @@ body{
 }
 
 .menu-logo{
+    color: #3700B3;
     font: 25px 'Montserrat';
     font-weight: 800;
     letter-spacing: 0.5px;
 }
 
 .menu-share{
-    width: fit-content;
+  width: fit-content;
+}
+
+.menu-share a{
+    color: #3700B3;
+    font: 14px 'Montserrat';
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.menu-share a:hover{
+  color: #6200EE;
 }
 
 /*
@@ -99,11 +115,9 @@ body{
  */
 
 .banner{
+  background: url('banner-home.jpg') center no-repeat;
+  min-height: 300px;
   padding-top: 70px;
-  width: 100%;
-}
-
-.banner-img{
   width: 100%;
 }
 
@@ -116,15 +130,26 @@ body{
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
 .posts-item{
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(98,0,238,0.25);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(98,0,238,0.25);
+  box-shadow: 0px 0px 0px 0px rgba(98,0,238,0.25);
   border: 1px solid #cccccc;
   border-radius: 5px;
   box-sizing: border-box;
   padding: 25px 35px;
+  transition: all ease 0.5s;
   width: 31%;
+}
+
+.posts-item:hover{
+  -webkit-box-shadow: 0px 0px 12px 1px rgba(98,0,238,0.25);
+  -moz-box-shadow: 0px 0px 12px 1px rgba(98,0,238,0.25);
+  box-shadow: 0px 0px 12px 1px rgba(98,0,238,0.25);
 }
 
 .posts-item-img{
@@ -134,23 +159,66 @@ body{
 
 .posts-item-title{
   color: #6200EE;
-  font: 18px 'Montserrat';
+  font: 18px/24px 'Montserrat';
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .posts-item-text{
-  font: 13px/24px 'Montserrat';
+  font: 13px/20px 'Montserrat';
   letter-spacing: 0.5px;
+  margin-top: 10px;
 }
 
 .posts-item-link{
   color: #3700B3;
+  display: block;
   font: 12px 'Montserrat';
   letter-spacing: 0.3px;
+  margin-top: 20px;
+  text-decoration: underline;
 }
 
-.footer{
+
+
+@media screen and (max-width: 900px){
+  .banner{
+    background-position: right;
+  }
+
+  .posts{
+    flex-direction: column;
+  }
+
+  .posts-item{
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .menu{
+    height: 60px;
+  }
+
+  .menu-content{
+      height: 60px;
+  }
+
+  .menu-logo{
+      font: 20px 'Montserrat';
+      font-weight: 800;
+  }
+
+
+  .posts-item-title{
+    font: 16px/20px 'Montserrat';
+    font-weight: 800;
+  }
+  
+  .posts-item-text{
+    font: 12px/18px 'Montserrat';
+  }
   
 }
