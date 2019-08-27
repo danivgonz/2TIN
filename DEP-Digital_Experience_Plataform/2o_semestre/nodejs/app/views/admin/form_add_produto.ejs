@@ -8,19 +8,19 @@
 
 		<h1>Adicionar produto</h1>
 
-		<form>
+		<form action="/produtos/salvar" method="POST">
 
             <div>
             <label>Nome</label>
-            <input type="text" name="username">
+            <input type="text" name="nome">
             </div>
 
             <div>
-            <label>Quantidade</label>
-            <input type="number" name="quantidade">
+            <label>Descrição</label>
+            <input type="text" name="descricao">
             </div>
 
-            <input type="submit" name="cadastrar" value="Cadastrar">
+            <input type="submit" value="Cadastrar">
 
     </form>
 

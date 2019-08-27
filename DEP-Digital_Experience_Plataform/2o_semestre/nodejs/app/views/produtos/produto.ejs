@@ -8,5 +8,20 @@
 
 		<h1>Produto</h1>
 
+
+		<table>
+			<tr>
+				<td>
+					Nome
+				</td>
+			</tr>
+			
+			<% for (let i = 0; i < produto.length; i++) { %>
+				<tr>
+					<td><%= produto[i].nome %></td>
+				</tr>
+			<% } %>
+			
+		</table>
 	</body>
 </html>

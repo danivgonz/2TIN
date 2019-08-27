@@ -1,22 +1,22 @@
 var mysql = require('mysql');
 
-var conecMySQL = function() {
+
+var conecMySQL = function(){
+   
     console.log('Conexão estabelecida');
-
-    var connection = mysql.createConnection({
-        host : 'localhost',
-        user : 'root',
-        password : '',
-        database : 'sistema_produto'
-    });
-
-    return connection;
+       var connection = mysql.createConnection(
+       {
+         host : 'localhost',
+         user : 'root',
+         password : '',
+         database : 'sistema_produto'
+       }
+     );
+     return connection;
 }
 
 
-module.exports = function() {
-
-   console.log('O autoload do Consign carregou apenas o módulo de conexão!')
-    return conecMySQL();
+module.exports = function(){
+    console.log('O Autoload do Consign carregou apenas o módulo de conexão');
+    return conecMySQL;
 }
-
