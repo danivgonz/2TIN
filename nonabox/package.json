@@ -1,0 +1,17 @@
+{
+  "name": "nonabox",
+  "version": "1.0.0",
+  "description": "Projeto AM - 2TINR",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniela Verissimo",
+  "license": "ISC",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1"
+  }
+}
